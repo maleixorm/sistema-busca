@@ -1,3 +1,9 @@
+<?php 
+    include("conexao.php");
+    $pesquisa = isset($_GET['busca']);
+    $sql = "SELECT * FROM veiculos WHERE fabricante LIKE '%$pesquisa%' OR modelo LIKE '%$pesquisa%' OR veiculo LIKE '%$pesquisa%'";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
